@@ -1,0 +1,288 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F7C600; /* Yellow */
+    color: #001F3F; /* Dark Blue */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #f7c600; /* Dark Blue */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.logo {
+    font-family: Cursive, Lucida Handwriting;
+    font-size: 24px;
+    font-weight: 700;
+    color: #02005d; /* Yellow */
+    letter-spacing: 1.5px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #02005d; /* Yellow */
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff4444; /* Lighter Yellow */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 100px 10%;
+    overflow: hidden;
+}
+
+/* Background Video */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.3; /* Adjust transparency as needed */
+}
+
+/* Optional: Add a semi-transparent dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust darkness */
+    z-index: -1;
+}
+
+/* Ensure text is on top */
+.hero-text, .hero-image {
+    position: relative;
+    z-index: 1;
+    color: #ffffff; /* Make text stand out */
+}
+
+.hello-text {
+    font-family: Cursive, Lucida Handwriting;
+    font-size: 24px;
+    color: #DAA520;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #F7C600;
+}
+
+.hero h1 span {
+    color: #FFD700;
+}
+
+.sub-heading {
+    font-size: 22px;
+    font-weight: 300;
+    color: #FFD700;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.hire-btn, .work-btn {
+    background: #F7C600;
+    color: #001F3F;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hire-btn:hover, .work-btn:hover {
+    background: #cacee5;
+    color: #001c38;
+}
+
+li {
+    color: rgb(248, 247, 188);
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 325px; /* Adjust size as needed */
+    height: 325px; /* Ensures it's a perfect circle */
+    border-radius: 50%;
+    object-fit: cover; /* Keeps the aspect ratio */
+    border: 3px solid #c2b010; /* Optional border */
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #001F3F;
+    margin-bottom: 20px;
+}
+
+.about-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about-left img {
+    width: 300px;
+    border-radius: 10px;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.about-right {
+    text-align: left;
+    max-width: 50%;
+}
+
+.about-right p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.download-btn {
+    background: #d2cba1;
+    color: #042f5a;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background: #9d7e02;
+    color: #001F3F;
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 36px;
+    color: #001F3F;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    width: 40%;
+    text-align: left;
+}
+
+.skill span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.progress {
+    background: #fcfcf7;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress div {
+    height: 10px;
+    background: #080041;
+    transition: width 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        max-width: 100%;
+    }
+
+    .about-details {
+        flex-direction: column;
+    }
+
+    .about-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 80%;
+    }
+}
